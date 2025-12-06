@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
 // Connect to MongoDB
 const startServer = async () => {
   try {
-    await mongoose.connect(process.env.MONGO_URL);
+    await mongoose.connect(process.env.MONGO_URI);
     console.log("Connected to MongoDB");
 
     const port = process.env.PORT || 10000;
